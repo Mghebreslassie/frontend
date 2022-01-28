@@ -10,7 +10,6 @@ import Login from "./components/Login";
 function App() {
   const myStorage = window.localStorage;
   const [currentUser, setCurrentUser] = useState(myStorage.getItem("User"));
-  const [togglePopup, setTogglePopup] = useState(false);
   const [newPlace, setNewPlace] = useState(null);
   const [star, setStar] = useState(1);
   const [desc, setDesc] = useState("");
@@ -95,7 +94,7 @@ function App() {
                 <RoomIcon
                   style={{
                     fontSize: viewport.zoom * 3,
-                    color: "red",
+
                     cursor: "pointer",
                     color: p.username === currentUser ? "tomato" : "slateblue",
                   }}
